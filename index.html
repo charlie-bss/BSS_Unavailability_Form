@@ -11,13 +11,13 @@
 <body>
   BSS Unavailability Form<br><br>
   
-  <form>
+  <form method="POST">
     <label for="codein">Code: (If you don't have one, don't put anything here!)</label><br>
     <input type="text" id="codein" name="codein"><br>
     <input type="submit" value="Submit">
   </form>
 
-  <?php echo $_POST["codein"]; ?>
+  Your code is <?php echo $_POST["codein"]; ?>
   <script src="script.js"></script>
   
 </body>
