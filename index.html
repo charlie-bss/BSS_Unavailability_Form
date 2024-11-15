@@ -13,12 +13,16 @@
   
   <form method="GET">
     <label for="codein">Code: (If you don't have one, don't put anything here!)</label><br>
-    <input type="text" id="codein" name="codein" placeholder="If you have a code, put it here!"><br>
+    <input type="text" id="codein" name="codein" autofocus><br>
     <input type="submit" value="Submit">
   </form>
 
   <br>Your code is <?php echo $_GET["codein"]; ?>
-  <script src="script.js"></script>
+  <button type="button"
+  onclick="document.getElementById('demo').innerHTML = document.getElementById('codein').innerHTML">
+  Click me to display Date and Time.</button>
+
+  <p id="demo"></p>
   
 </body>
   
