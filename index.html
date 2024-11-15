@@ -28,9 +28,9 @@
   x.setAttribute("type", "text");
   document.body.appendChild(x);
   function myFunction() {
-    document.getElementById("demo").innerHTML = document.getElementById("aba")[document.getElementById("aba").length-1];
+    document.getElementById("demo").innerHTML = document.getElementById("aba").lastElementChild.innerText;
     var node = document.createElement("div");
-    node.appendChild(document.createTextNode(document.getElementById("aba")[document.getElementById("aba").length-1].innerText));
+    node.appendChild(document.createTextNode(Number(document.getElementById("aba").lastElementChild.innerText)+1));
     document.getElementById("aba").appendChild(node);
   }
 </script>
