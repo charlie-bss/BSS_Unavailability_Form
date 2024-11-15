@@ -24,26 +24,28 @@
 <p>BSS Unavailability Form<br><br>Code Input: (If you don't have one, don't put anything here!)</p>
 
 <script>
-var x = document.createElement("INPUT");
+  var x = document.createElement("INPUT");
   x.setAttribute("type", "text");
   document.body.appendChild(x);
   function myFunction() {
-  	x = document.getElementById("INPUT");
-  	x.setAttribute("type", "text");
-    x.setAttribute("value", "AAAA");
+    document.getElementById("demo").innerHTML = document.getElementById("aba")[document.getElementById("aba").length-1];
+    var node = document.createElement("div");
+    node.appendChild(document.createTextNode(document.getElementById("aba")[document.getElementById("aba").length-1].innerText));
+    document.getElementById("aba").appendChild(node);
   }
 </script>
 
 <button onclick="myFunction()">Submit</button><br><br>
+<p id="demo"></p>
 
-<div class="grid-container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
-  <div>7</div>
+<div class="grid-container" id="aba">
+  <div class="child">1</div>
+  <div class="child">2</div>
+  <div class="child">3</div>
+  <div class="child">4</div>
+  <div class="child">5</div>
+  <div class="child">6</div>
+  <div class="child">7</div>
 </div>
 
 </body>
